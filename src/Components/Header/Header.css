@@ -1,0 +1,19 @@
+
+
+.logo-image {
+    width: 30px; /* Adjust the logo size to fit with reduced navbar height */
+    height: 30px;
+    object-fit: contain;
+}
+
+
+@font-face {
+    font-family: myFont;
+    src: url(../Header/bad.TTF);
+}
+
+@keyframes animate {
+    100%{
+        background-position: 400%;
+    }
+}

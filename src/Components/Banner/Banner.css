@@ -1,0 +1,36 @@
+#banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: rgba(124, 149, 164, 0.756);
+}
+
+#banner .carousel-item img {
+    height: 800px;
+    object-fit: cover;
+    filter: blur(8px);
+}
+
+.quote {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-text {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.cursor {
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px; /* Ensure space between text and cursor */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Cursor blink effect */
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
