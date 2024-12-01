@@ -1,19 +1,27 @@
-
-
 .logo-image {
-    width: 30px; /* Adjust the logo size to fit with reduced navbar height */
-    height: 30px;
-    object-fit: contain;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
-
-@font-face {
-    font-family: myFont;
-    src: url(../Header/bad.TTF);
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-@keyframes animate {
-    100%{
-        background-position: 400%;
-    }
+body.dark-mode .bg-white {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .btn-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .btn-dark,
+  .btn-light {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 }
