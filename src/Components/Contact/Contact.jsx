@@ -23,12 +23,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-5 bg-light">
+    <section id="contact" className="py-5" style={{ backgroundColor: 'var(--background-color)' }}>
       <MDBContainer>
         <MDBRow className="align-items-center">
           <MDBCol md="6">
-          <h2 className="text-center mb-4">CONTACT ME 📞</h2>
-          <form onSubmit={handleSubmit}>
+          <h2 className="text-center mb-4" style={{ color: 'var(--text-color)' }}>CONTACT ME 📞</h2>
+          <form onSubmit={handleSubmit} >
               <MDBInput
                 label="Enter your name"
                 id="name"
@@ -38,6 +38,7 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
+                labelStyle={{ color: 'var(--text-color)' }}
               />
               <MDBInput
                 label="Enter your email address"
@@ -48,6 +49,7 @@ const Contact = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
+                labelStyle={{ color: 'var(--text-color)' }}
               />
               <MDBTextArea
                 label="Type your message here."
@@ -58,8 +60,9 @@ const Contact = () => {
                 required
                 value={formData.message}
                 onChange={handleChange}
+                labelStyle={{ color: 'var(--text-color)' }}
               />
-              <MDBBtn type="submit" color="primary">Submit</MDBBtn>
+              <MDBBtn type="submit" color="primary" style={{ backgroundColor: 'var(--primary-color)' }}>Submit</MDBBtn>
             </form>
           </MDBCol>
           <MDBCol md="6" className="text-center">

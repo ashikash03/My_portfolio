@@ -1,0 +1,39 @@
+/* Styling for the Tech Logos Marquee */
+.tech-marquee {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    margin-top: 2rem;
+  }
+  
+  .tech-track {
+    display: flex;
+    animation: scroll 40s linear infinite; /* Slower speed, infinite scroll */
+    min-width: 200%; /* Adjust the width to cover all content */
+  }
+  
+  .tech-track img {
+    height: 50px; /* Adjust logo size */
+    margin: 0 30px; /* Add space between logos */
+    /* Apply grayscale by default */
+    
+  }
+  
+
+  .about .heading,p{
+    color: var(--text-color);
+  }
+
+
+  
+  /* Keyframes for seamless marquee scrolling */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); /* Start at initial position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move entire track to the left */
+    }
+  }
+  

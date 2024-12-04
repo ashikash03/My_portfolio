@@ -1,9 +1,13 @@
-
-
 .logo-image {
-    width: 30px; /* Adjust the logo size to fit with reduced navbar height */
-    height: 30px;
+    width: 100px; /* Adjust width as per your needs */
+    height: auto; /* Ensure it scales proportionally */
     object-fit: contain;
+    transition: filter 0.3s ease-in-out; /* Smooth transition on mode change */
+}
+
+/* Dark Mode logo styling */
+.dark-mode .logo-image {
+    filter: brightness(0) invert(1); /* Make the SVG white in dark mode */
 }
 
 
@@ -15,5 +19,57 @@
 @keyframes animate {
     100%{
         background-position: 400%;
+    }
+}
+/* Styles for mobile screens */
+@media (max-width: 576px) {
+    .logo-image {
+        width: 80px; /* Adjust logo size for mobile */
+    }
+
+    MDBNavbar {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    MDBNavbarNav {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+        margin-top: 10px; /* Add space between logo and links */
+    }
+
+    MDBNavbarLink {
+        font-size: 16px; /* Smaller font size for links */
+        padding: 8px 0; /* Adjust link padding */
+    }
+
+    button {
+        margin: 5px 0; /* Reduce margin for buttons */
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+/* Styles for tablet screens */
+@media (min-width: 577px) and (max-width: 768px) {
+    .logo-image {
+        width: 90px; /* Adjust logo size for tablet */
+    }
+
+    MDBNavbar {
+        padding: 15px; /* Adjust padding for tablet */
+    }
+
+    MDBNavbarNav {
+        flex-direction: row; /* Keep navbar items in a row */
+        justify-content: space-between; /* Distribute space evenly */
+    }
+
+    MDBNavbarLink {
+        font-size: 18px; /* Slightly larger font size for links */
+        padding: 10px; /* Adjust link padding */
+    }
+
+    button {
+        margin: 8px; /* Adjust button margin */
+        font-size: 18px; /* Adjust font size */
     }
 }

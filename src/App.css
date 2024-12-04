@@ -1,0 +1,32 @@
+/* Light Mode Variables */
+:root {
+  --background-color: rgba(255, 255, 255, 0.8);
+  --banner-background-color: rgba(255, 255, 255, 0.3);
+  --background-opacity: rgba(255, 255, 255, 0.75);
+  --primary-color: #007bff; /* MDBBtn primary */
+  --text-color: black;
+  --footer-bg-color: rgba(0, 0, 0, 0.2);
+  --not-found-bg-color: #f0f0f0;
+  --about-bg-color: #ffffffe5;
+  --flip-box-front-bg: #bbb;
+  --flip-box-back-bg: rgba(255, 255, 255, 0.726);
+  --flip-box-back-text: rgba(0, 0, 0, 0.949);
+  --link-color: #ff6347;
+  --logo-color: black; /* Default logo color in light mode */
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+  --background-color: rgba(18, 18, 18, 0.8); /* Dark background */
+  --banner-background-color: rgba(18, 18, 18, 0.3);
+  --background-opacity: rgba(18, 18, 18, 0.555);
+  --primary-color: #bb86fc; /* MDBBtn primary for dark */
+  --text-color: white;
+  --footer-bg-color: rgba(255, 255, 255, 0.2);
+  --not-found-bg-color: #1e1e1e;
+  --flip-box-front-bg: #333;
+  --flip-box-back-bg: #000000ab; /* Dark blue */
+  --flip-box-back-text: rgba(255, 255, 255, 0.949);
+  --logo-image-color: filter: brightness(0) invert(1);
+  --logo-color: white; /* Change logo color to white in dark mode */
+}

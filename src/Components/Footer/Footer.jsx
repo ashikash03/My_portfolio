@@ -22,6 +22,7 @@ function Footer() {
             className='text-dark m-1'
             href="mailto:ashikash170303@gmail.com"
             role='button'
+            style={{ color: 'var(--text-color)' }}
           >
             <MDBIcon fab className='fa-google' />
           </MDBBtn>
@@ -32,7 +33,7 @@ function Footer() {
             floating
             size="lg"
             className='text-dark m-1'
-            href='#!'
+            href='https://www.instagram.com/its_muhammed_ashik/profilecard/?igsh=MWt4NWlvejhxbW0xZA=='
             role='button'
           >
             <MDBIcon fab className='fa-instagram' />
@@ -64,11 +65,11 @@ function Footer() {
         </section>
       </MDBContainer>
 
-      <div className='text-center text-dark p-1' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center p-1'>
         © 2020 Copyright:
-        <a className='text-dark' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
+        <a className='text-dark' href='https://mdbootstrap.com/' style={{ color: 'var(--text-color)' }}>
+    MDBootstrap.com
+  </a>
       </div>
     </MDBFooter>
   );

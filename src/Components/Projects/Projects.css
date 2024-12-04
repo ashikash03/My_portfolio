@@ -14,6 +14,8 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    background-color: var(--flip-box-front-bg);
+    color: var(--text-color);
 }
 
 .flip-box:hover .flip-box-inner {
@@ -27,14 +29,11 @@
     backface-visibility: hidden;
 }
 
-.flip-box-front {
-    background-color: #bbb;
-    color: black;
-}
+
 
 .flip-box-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: var(--flip-box-back-bg);
+    color: var(--flip-box-back-text);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;

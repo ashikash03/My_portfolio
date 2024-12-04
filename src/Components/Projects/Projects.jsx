@@ -24,7 +24,8 @@ const projectsData = [
     image1: Food,
     image2: Food2,
     title: 'Dash N Dine',
-    description: 'online restaurant website using only HTML and CSS'
+    description: 'online restaurant website using only HTML and CSS',
+    link: "https://ashikash03.github.io/online-restaurant-website/"
   },
   {
     id: 2,
@@ -38,21 +39,24 @@ const projectsData = [
     image1: Book,
     image2: Book2,
     title: 'Book Store',
-    description: 'Online Book store website created using HTML, CSS, and Bootstrap'
+    description: 'Online Book store website created using HTML, CSS, and Bootstrap',
+    link:"https://ashikash03.github.io/online-book-store/"
   },
   {
     id: 4,
     image1: Animal,
     image2: Animal2,
     title: 'Animal Matters TO Me Clone',
-    description: "Created a clone website of AMTM welfare NGO's Website using HTML, CSS and Bootstrap"
+    description: "Created a clone website of AMTM welfare NGO's Website using HTML, CSS and Bootstrap",
+    link: "https://ashikash03.github.io/Animal-welfare-NGO-website-clone/"
   },
   {
     id: 5,
     image1: Calculator,
     image2: Calculator2,
     title: 'Calculator',
-    description: 'Created a Simple Calculator webpage using HTML, CSS, Bootstrap and JavaScript'
+    description: 'Created a Simple Calculator webpage using HTML, CSS, Bootstrap and JavaScript',
+    link: "https://ashikash03.github.io/simple_calculator/"
   },
   {
     id: 6,
@@ -95,6 +99,7 @@ const Projects = () => {
                   <div className="flip-box-back d-flex flex-column justify-content-center align-items-center">
                     <h5>{project.title}</h5>
                     <p>{project.description}</p>
+                    <a href={project.link}>View Project</a>
                   </div>
                 </div>
               </div>

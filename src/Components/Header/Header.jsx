@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MDBContainer,
   MDBNavbar,
@@ -8,19 +8,28 @@ import {
   MDBNavbarLink,
   MDBIcon
 } from 'mdb-react-ui-kit';
-import logo from '../../assets/images/logo.ico'; // Import your logo here
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import signatureLogo from '../../assets/images/signatureNew.svg'; // Import your signature SVG file
 import '../Header/Header.css';
 
 function Header() {
   const [openNavSecond, setOpenNavSecond] = useState(false);
-  
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
 
   return (
-    <MDBNavbar expand='lg' light sticky className='bg-white bg-opacity-75'>
+    <MDBNavbar expand='lg' sticky style={{ backgroundColor: 'var(--background-color)', opacity: 'var(--background-opacity)' }}>
       <MDBContainer fluid>
         <MDBNavbarBrand aria-current='page' href='#'>
-          {/* Replace the brand name with the logo image */}
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src={signatureLogo} alt="Signature Logo" className="logo-image" />
         </MDBNavbarBrand>
         <MDBNavbarToggler
           aria-expanded='false'
@@ -29,10 +38,34 @@ function Header() {
         >
           <MDBIcon icon='bars' fas />
         </MDBNavbarToggler>
-        <MDBNavbarNav className='d-flex w-auto '>
-          <MDBNavbarLink href='#about'>About Me</MDBNavbarLink>
-          <MDBNavbarLink href='#projects'>Projects</MDBNavbarLink>
-          <MDBNavbarLink href='#contact'>Contact me</MDBNavbarLink>
+        <MDBNavbarNav className='d-flex w-auto align-items-center' >
+          <MDBNavbarLink href='#about' style={{ color: 'var(--text-color)'}}>About Me</MDBNavbarLink>
+          <MDBNavbarLink href='#projects' style={{ color: 'var(--text-color)'}}>Projects</MDBNavbarLink>
+          <MDBNavbarLink href='#contact' style={{ color: 'var(--text-color)'}}>Contact me</MDBNavbarLink>
+          <button 
+            onClick={toggleDarkMode} 
+            style={{ 
+              margin: '10px', 
+              padding: '10px', 
+              border: 'none', 
+              background: 'transparent', 
+              cursor: 'pointer', 
+              fontSize: '18px', 
+              color: 'var(--text-color)' 
+            }}
+          >
+            {darkMode ? (
+              <>
+                <FontAwesomeIcon icon={faSun} style={{ marginRight: '8px' }} />
+                Light Mode
+              </>
+            ) : (
+              <>
+                <FontAwesomeIcon icon={faMoon} style={{ marginRight: '8px' }} />
+                Dark Mode
+              </>
+            )}
+          </button>
         </MDBNavbarNav>
       </MDBContainer>
     </MDBNavbar>
